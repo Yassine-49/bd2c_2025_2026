@@ -1,0 +1,108 @@
+<!-- 
+    Document   : html
+    Created on : 21 mars 2011, 15:46:02
+    Author     : kamal
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title> hello</title>
+</head>
+<body>
+<form name="form1" onsubmit="return validerForm();" >
+<fieldset><legend>Inscription</legend>
+<table>
+<tr>
+	<td>Num :</td>
+	<td><input type="text" name="tnum"  value="" size="17" onblur="testnum();">*</td>
+	<td><p id="e" style="display :none ;color:red">Remplir le champ</p></td>
+</tr>
+
+<tr>
+	<td>Nom :</td>
+	<td><input type="text" name="tnom"  value="" size=17 onblur="testnom();">*</td>
+	<td><p id="er" style="display :none ;color:red">Remplir le champ</p></td>
+</tr>
+
+
+<tr>
+	<td>Date naissance :</td>
+	<td><input type="text" name="tdate" value="" size=17 onblur="verifdate();">*</td>
+	<td><p id="err" style="display :none ;color:red">Erreur format</p></td>
+</tr>
+
+<tr>
+	<td>Salaire :</td>
+	<td><input type="text" name="salaire" value="" size=17 ></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>Rue :</td>
+	<td><input type="text" name="Rue" value="" size="10" ></td>
+	<td></td>
+</tr>
+
+
+<tr>
+	<td>Ville :</td>
+	<td><input type="text" name="ville" value="" size="10" ></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td><input type="submit"  value="OK"></td>
+	<td><input type="reset" value="Annuler"></td>
+</tr>
+
+ </table>
+ </fieldset>
+</form>
+</body>
+</html>
+
+9 –
+
+<script language="javascript">
+//===============Test le Champs Num
+function testnum(){
+var N=document.form1.tnum.value;
+if(N==""){
+document.getElementById("e").style.display='block';return false;
+}else{
+document.getElementById("e").style.display='none';return true;
+}
+}
+//===============Test le Champs nom
+function testnom(){
+var P=document.form1.tnom.value;
+if(P==""){
+document.getElementById("er").style.display='block';return false;
+}else{
+document.getElementById("er").style.display='none';return true;
+}
+}
+//======================================//
+//verifier date
+function testdate(d){
+var dat=/^(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d$/;
+return d.match(dat);
+}
+//===========//
+function verifdate(){
+var dt=document.form1.tdate.value;
+if(!testdate(dt)){
+document.getElementById("err").style.display='block';return false;
+
+}else{
+document.getElementById("err").style.display='none';return true;
+}
+}
+
+function validerForm(){
+
+return  verifdate()  & testnum()  & testnom();
+}
+
+</script>
+

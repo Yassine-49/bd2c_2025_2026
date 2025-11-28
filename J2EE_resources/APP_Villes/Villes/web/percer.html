@@ -1,0 +1,44 @@
+    <html>
+     <head>
+     <title>Calcule du périmètre d'un cercle</title>
+     </head>
+     <body>
+     <script type="text/javascript"><!--
+     valeur = Math.PI;
+     function calcul()
+     {window.document.forme1.resultype.disabled = false;
+     window.document.forme1.resultype1.disabled = true;
+     window.document.forme1.champ2.disabled = true;
+     nombre = window.document.forme1.champ1.value;
+     resultat = nombre*valeur;
+     resultat2 = nombre/2;
+     window.document.forme1.champ2.value='Le périmètre est de ' + resultat + '...';
+     window.document.forme1.champ3.value= ' ' + resultat2;
+     }
+     function vide()
+     {window.document.forme1.champ1.value='';
+     window.document.forme1.champ2.disabled = true;
+     window.document.forme1.champ2.value=' Entrez le diamètre du cercle désiré...';
+     }
+     function calcul1()
+     {window.document.forme1.resultype.disabled = true;
+     window.document.forme1.resultype1.disabled = false;
+     window.document.forme1.champ2.disabled = false;
+     nombre = window.document.forme1.champ1.value;
+     resultat = nombre*valeur;
+     resultat2 = nombre/2;
+     window.document.forme1.champ2.value= ' ' + resultat + '...';
+     window.document.forme1.champ3.value= ' ' + resultat2;
+     }
+     //-->
+     </script>
+     <form name="forme1">
+     <p> Diamètre: <input style="background-color: rgb(0, 255, 0);" size="20" name="champ1" onchange="calcul()" onfocus="vide()" value=" . . .(diamètre). . ." type="text">
+     <input name="resultype1" value="Calculer" type="button">
+     Périmètre: <input onclick="calcul()" size="35" name="champ2" disabled="disabled" value=" . . .(périmètre). . ." type="text">
+     <input name="resultype" value="Simplifier" onclick="calcul1()" type="button">
+     Rayon:<input onclick="calcul()" size="10" name="champ3" disabled="disabled" value=". . .(rayon). . ." type="text">
+     </p>
+     </form>
+     </body>
+    </html>

@@ -1,0 +1,83 @@
+.standard
+{
+    BACKGROUND-COLOR: #ffcc66
+}
+.centre
+{
+    TEXT-ALIGN: center
+}
+.entete
+{
+    FONT-SIZE: large;
+    BACKGROUND: url(Entete.jpg) #ffcc66 fixed no-repeat left 100%;
+    COLOR: darkblue;
+    FONT-STYLE: italic;
+    FONT-FAMILY: 'Comic Sans MS';
+    HEIGHT: 14%;
+    TEXT-ALIGN: center
+}
+.titregros
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 180%;
+    COLOR: darkslateblue;
+    FONT-FAMILY: 'Comic Sans MS'
+}
+.titregrosrouge
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 180%;
+    COLOR: red;
+    FONT-FAMILY: 'Comic Sans MS'
+}
+.titre
+{
+    FONT-SIZE: 100%;
+    COLOR: darkred;
+    FONT-STYLE: italic;
+    FONT-FAMILY: 'Comic Sans MS'
+}
+.grid
+{
+    BORDER-RIGHT: lightgrey thin outset;
+    BORDER-TOP: lightgrey thin outset;
+    FONT-SIZE: 90%;
+    BORDER-LEFT: lightgrey thin outset;
+    COLOR: darkred;
+    BORDER-BOTTOM: lightgrey thin outset;
+    FONT-FAMILY: 'Comic Sans MS';
+    TEXT-ALIGN: left;
+    BORDER: 5
+}
+.entetegrid
+{
+    BORDER-RIGHT: lightgrey inset;
+    BORDER-TOP: lightgrey inset;
+    FONT-SIZE: large;
+    BORDER-LEFT: lightgrey inset;
+    COLOR: darkblue;
+    BORDER-BOTTOM: lightgrey inset;
+    FONT-STYLE: italic;
+    FONT-FAMILY: 'Comic Sans MS'
+}
+.menu
+{
+    FONT-SIZE: 60%;
+    COLOR: darkred;
+    FONT-STYLE: italic;
+    FONT-FAMILY: 'Comic Sans MS'
+}
+.erreur
+{
+    COLOR: #ff3333;
+    TEXT-ALIGN: left
+}
+.lien2
+{
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    BORDER-LEFT: 0px;
+    COLOR: blue;
+    BORDER-BOTTOM: 0px;
+    TEXT-DECORATION: underline
+}
